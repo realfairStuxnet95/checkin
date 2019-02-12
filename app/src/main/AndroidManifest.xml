@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.printingdemo">
+    <permission
+        android:name="device.sdk.sample.scanner.permission.SCANNER_RESULT_RECEIVER"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="com.example.printingdemo.permission.SCANNER_RESULT_RECEIVER" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/police"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/police"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PrintActivity">
+        </activity>
+        <activity
+            android:name="com.example.printingdemo.HomeActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.example.printingdemo.HomeActivity$ScanResultReceiver"
+            android:enabled="true"
+            android:permission="com.example.printingdemo.permission.SCANNER_RESULT_RECEIVER"
+            android:priority="0" >
+            <intent-filter>
+                <action android:name="device.common.USERMSG" />
+                <action android:name="device.scanner.EVENT" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library android:name="device.sdk" android:required="true" />
+    </application>
+
+</manifest>

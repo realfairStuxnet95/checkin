@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Online Exam CheckIn</string>
+
+    <string name="new_printer">Link printer</string>
+    <string name="print">Print</string>
+    <string name="switch_on_printer">Make sure that the printer is on. If a connection cannot be established, please switch the printer off and turn it on again.</string>
+    <string name="connecting">Connecting to the printer through Bluetooth</string>
+    <string name="non_paired_printers1">There are no paired printers</string>
+    <string name="non_paired_printers2">Please turn on the printer and link it to your phone by tapping the button. The PIN of the Bixolon printers is 0000.</string>
+    <string name="printer_ready1">Printer ready</string>
+    <string name="printer_ready2">Tap the "Print" button to start printing</string>
+
+    <string name="get_source1">Wait for Printer Once it shows ready click Print</string>
+    <string name="get_source2"></string>
+    <string name="bar_type">Barcode Type</string>
+
+    <string name="scan_result">User ID number</string>
+
+    <string name="scan_on">Scan On</string>
+
+    <string name="scan_off">Scan Off</string>
+
+    <string name="auto_scan">Auto Scan</string>
+
+    <string name="beep">Beep</string>
+
+    <string name="enable_upc">Enable UPC-A</string>
+
+    <string name="disable_upc">Disable UPC-A</string>
+
+    <string name="property_enable">Enable UPC-A "Send Check Character"</string>
+
+    <string name="property_disable">Disable UPC-A "Send Check Character"</string>
+
+    <string name="msg_wait">Waiting…</string>
+</resources>
